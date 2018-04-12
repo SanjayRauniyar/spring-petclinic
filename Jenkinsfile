@@ -40,7 +40,7 @@ pipeline {
             always{
                 echo "running the application"
                 sh 'docker build -t springapp .'
-                sh 'docker run springapp
+                sh 'docker run springapp'
             }
         }
        
