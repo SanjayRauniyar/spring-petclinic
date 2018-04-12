@@ -33,7 +33,7 @@ pipeline {
          stage('Deploy') {
           steps {
             sh 'cp target/*.jar /home/parakhi/pet'
-            sh 'nohup java -jar /home/parakhi/pet/spring-petclinic-1.5.1.jar &'
+            sh "ssh parakhi@10.0.2.11 'nohup java -jar /home/parakhi/pet/spring-petclinic-1.5.1.jar &'"
           }
         }
        
