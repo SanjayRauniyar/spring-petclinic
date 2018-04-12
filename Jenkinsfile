@@ -33,8 +33,15 @@ pipeline {
          stage('Deployment') {
           steps {
              sh 'cp target/*.jar ~/pet'
-             sh 'java -jar ~/pet/spring-petclinic-1.5.1.jar & sleep 5m'
-          }
+             }
+        }
+        
+        post{
+            always{
+                echo "running the application"
+                sh 'docker build -t springapp .'
+                sh 'docker run springapp
+            }
         }
        
     }
