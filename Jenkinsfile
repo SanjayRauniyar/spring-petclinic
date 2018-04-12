@@ -37,6 +37,7 @@ pipeline {
               post{
             always{
                 echo "running the application"
+                sh 'docker rm $(docker ps -a -q)'
                 sh 'docker build -t springapp .'
                 sh 'docker run -d -p 8090:8090 springapp'
             }
