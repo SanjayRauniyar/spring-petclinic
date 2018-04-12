@@ -34,7 +34,7 @@ pipeline {
           steps {
             input 'Do you approve the deployment?'
             sh 'cp target/*.jar /home/parakhi/pet'
-            'nohup java -jar /home/parakhi/pet/spring-petclinic-1.5.1.jar &'
+            sh 'nohup java -jar /home/parakhi/pet/spring-petclinic-1.5.1.jar &> /dev/null'
           }
         }
        
