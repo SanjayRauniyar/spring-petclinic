@@ -33,7 +33,7 @@ pipeline {
          stage('Deploy') {
           steps {
              sh 'cp target/*.jar ~/pet'
-             sh "java -jar ~/pet/spring-petclinic-1.5.1.jar &"
+             sh 'java -jar ~/pet/spring-petclinic-1.5.1.jar &'
           }
         }
        
