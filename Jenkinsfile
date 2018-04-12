@@ -37,6 +37,7 @@ pipeline {
               post{
             always{
                 echo "running the application"
+                sh 'docker stop pet_app'
                 sh 'docker build -t springapp .'
                 sh 'docker run -d --name pet_app -p 8090:8090 springapp'
             }
