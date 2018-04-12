@@ -34,15 +34,16 @@ pipeline {
           steps {
              sh 'cp target/*.jar ~/pet'
              }
-        }
-        
-        post{
+              post{
             always{
                 echo "running the application"
                 sh 'docker build -t springapp .'
                 sh 'docker run springapp'
             }
         }
+        }
+        
+       
        
     }
 }
