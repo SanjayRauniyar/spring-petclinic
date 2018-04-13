@@ -36,9 +36,10 @@ pipeline {
             echo "running the application"
               sh 'pwd'
              }
+                agent { dockerfile true }
          }
         
-         agent { dockerfile true }
+      
         
        
        
