@@ -43,7 +43,7 @@ pipeline {
                 sh 'docker run -d --name pet_app -p 8090:8090 springapp'
             }
                   success{
-                      echo " deployment done"
+                      echo " deployment done>>>>"
                   }
                   
         }
