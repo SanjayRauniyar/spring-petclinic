@@ -34,6 +34,7 @@ pipeline {
              agent { dockerfile true }
           steps {
             echo "running the application"
+              sh 'pwd'
              }
          }
         
