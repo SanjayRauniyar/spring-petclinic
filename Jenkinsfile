@@ -31,12 +31,14 @@ pipeline {
         }
         
          stage('Deployment') {
-             agent { dockerfile true }
+            
           steps {
             echo "running the application"
               sh 'pwd'
              }
          }
+        
+         agent { dockerfile true }
         
        
        
