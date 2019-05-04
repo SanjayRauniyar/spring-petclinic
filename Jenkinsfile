@@ -32,6 +32,7 @@ pipeline {
         
            stage('Deployment') {
           steps {
+
              sh 'cp target/*.jar ~/pet'
              }
               post{
